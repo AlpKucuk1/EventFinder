@@ -4,5 +4,7 @@
     <string name="filter_by_city">Sort by City</string>
     <string name="filter_by_date">Sort by Date</string>
     <string name="filter_button_text">Sort</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
