@@ -3,19 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/mainFragment">
 
+    <!-- Main Fragment -->
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/MainFragment"
         android:name="com.example.assignment1.MainFragment"
-        android:label="fragment_main"
+        android:label="Main Fragment"
         tools:layout="@layout/fragment_main">
+
+        <!-- Navigate to Event List -->
         <action
-            android:id="@+id/action_mainFragment_to_eventDetailFragment"
+            android:id="@+id/action_MainFragment_to_eventListFragment"
+            app:destination="@id/EventListFragment" />
+
+        <!-- Navigate to Filter -->
+        <action
+            android:id="@+id/action_mainFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+
+    <!-- Event List Fragment -->
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.example.assignment1.EventListFragment"
+        android:label="Event List Fragment"
+        tools:layout="@layout/fragment_event_list">
+
+        <!-- Navigate to Event Detail -->
+        <action
+            android:id="@+id/action_eventListFragment_to_eventDetailFragment"
             app:destination="@id/eventDetailFragment" />
     </fragment>
 
+    <!-- Event Detail Fragment -->
     <fragment
         android:id="@+id/eventDetailFragment"
         android:name="com.example.assignment1.EventDetailFragment"
-        android:label="fragment_event_detail"
-        tools:layout="@layout/fragment_event_detail" />
+        android:label="Event Detail">
+    <argument
+        android:name="event"
+        app:argType="com.example.assignment1.Event" />
+    </fragment>
+
+    <!-- Filter Fragment -->
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.assignment1.FilterFragment"
+        android:label="Filter Fragment"
+        tools:layout="@layout/fragment_filter" />
 </navigation>

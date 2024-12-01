@@ -3,15 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="mainActivity"
-            type="com.example.assignment1.MainActivity" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
         <!-- NavHostFragment to handle Navigation between Fragments -->
         <androidx.navigation.fragment.NavHostFragment
@@ -21,5 +16,6 @@
             android:layout_height="match_parent"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_graph" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

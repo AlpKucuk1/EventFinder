@@ -1,10 +1,5 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:8.7.2")
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.6.0")  // Safe Args plugin
-    }
+plugins {
+    id("com.android.application") version "8.7.2" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.10" apply false
+    id("androidx.navigation.safeargs.kotlin") version "2.6.0" apply false
 }

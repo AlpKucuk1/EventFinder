@@ -1,12 +1,10 @@
 package com.example.assignment1
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.assignment1.databinding.FragmentMainBinding
 
@@ -24,9 +22,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         // Set up RecyclerView with the EventDetails adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = EventDetails(events) { event ->
-            // Use NavController to navigate to the EventDetailFragment
+            // Navigate to the EventDetailFragment
             val action = MainFragmentDirections.actionMainFragmentToEventDetailFragment(event)
-            NavHostFragment.findNavController(this).navigate(action)
+            findNavController().navigate(action)
         }
 
         // Sort button popup for filtering events
@@ -52,6 +50,16 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             }
             popupMenu.show()
         }
+
+        // Navigate to Event List Fragment
+        binding.navigateToEventListButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_eventListFragment)
+        }
+
+        // Navigate to Filter Fragment
+        binding.navigateToFilterButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_filterFragment)
+        }
     }
 
     private fun filterEvents(criteria: String) {
@@ -62,9 +70,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             else -> events
         }
         binding.recyclerView.adapter = EventDetails(filteredEvents) { event ->
-            // Use NavController to navigate to the EventDetailFragment
+            // Navigate to the EventDetailFragment
             val action = MainFragmentDirections.actionMainFragmentToEventDetailFragment(event)
-            NavHostFragment.findNavController(this).navigate(action)
+            findNavController().navigate(action)
         }
     }
 
