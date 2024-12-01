@@ -29,7 +29,7 @@ class EventListFragment : Fragment(R.layout.fragment_event_list) {
         // Set up RecyclerView
         val recyclerView: RecyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
-        val adapter = EventAdapter(events) { event ->
+        val adapter = EventDetails(events) { event ->
             val action = EventListFragmentDirections.actionEventListFragmentToEventDetailFragment(event)
             findNavController().navigate(action)
         }

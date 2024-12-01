@@ -24,7 +24,7 @@ class EventDetailFragment : Fragment() {
         val event = args.event
         binding.eventNameDetail.text = event.name
         binding.eventLocationDetail.text = event.location
-        binding.eventDateDetail.text = "${event.date} at ${evt.time}"
+        binding.eventDateDetail.text = "${event.date} at ${event.time}"
         binding.eventDescriptionDetail.text = event.description
 
         return binding.root
