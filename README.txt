@@ -1,3 +1,4 @@
+#Assignment 1-EventFinder(with data from mockaroo)
 
 ## Features
 - **RecyclerView Implementation**: Displays a list of events in a structured and scrollable layout.
@@ -14,13 +15,13 @@
 ## How to Run
 1. Clone the repository:
     ```
-    git clone https://github.com/AlpKucuk1/Eventfinder
+    git clone https://github.com/AlpKucuk1/Assignment1Eventfinder
     ```
 2. Open the project in **Android Studio**.
 3. Build and run the application on an **Android Emulator** or physical device.
 
 ## Directory Structure
-- **app/src/main/java/com.example.EventFinder**: Contains the main Kotlin source code files.
+- **app/src/main/java/com.example.assignment1**: Contains the main Kotlin source code files.
 - **app/src/main/res/layout**: Contains the XML layout files for the UI components.
 - **app/src/main/assets/events**: Holds CSV data files for loading event data.
 
