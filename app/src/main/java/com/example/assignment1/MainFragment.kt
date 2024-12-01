@@ -22,10 +22,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         // Set up RecyclerView with the EventDetails adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = EventDetails(events) { event ->
-            // Navigate to the EventDetailFragment
+            // Use Safe Args to navigate to the EventDetailFragment
             val action = MainFragmentDirections.actionMainFragmentToEventDetailFragment(event)
             findNavController().navigate(action)
         }
+
 
         // Sort button popup for filtering events
         binding.sortButton.setOnClickListener { view ->

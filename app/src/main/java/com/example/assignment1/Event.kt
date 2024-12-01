@@ -1,5 +1,9 @@
 package com.example.assignment1
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Event(
     val id: Int,
     val name: String,
@@ -7,4 +11,4 @@ data class Event(
     val date: String,
     val time: String,
     val description: String
-)
+) : Parcelable
