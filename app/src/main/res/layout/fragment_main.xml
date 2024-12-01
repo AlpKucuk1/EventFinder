@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/filter_button_text" />
         </LinearLayout>
+
         <!-- RecyclerView for events -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -56,6 +57,28 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Button to navigate to Event List -->
+        <Button
+            android:id="@+id/navigateToEventListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Event List"
+            app:layout_constraintTop_toBottomOf="@id/recyclerView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Button to navigate to Filter Fragment -->
+        <Button
+            android:id="@+id/navigateToFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Filter"
+            app:layout_constraintTop_toBottomOf="@id/navigateToEventListButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

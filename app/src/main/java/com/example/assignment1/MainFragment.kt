@@ -53,7 +53,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         // Navigate to Event List Fragment
         binding.navigateToEventListButton.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_eventListFragment)
+            findNavController().navigate(R.id.action_MainFragment_to_eventListFragment)
         }
 
         // Navigate to Filter Fragment

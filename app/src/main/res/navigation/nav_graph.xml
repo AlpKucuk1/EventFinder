@@ -1,7 +1,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/MainFragment">
 
     <!-- Main Fragment -->
     <fragment
@@ -13,12 +13,16 @@
         <!-- Navigate to Event List -->
         <action
             android:id="@+id/action_MainFragment_to_eventListFragment"
-            app:destination="@id/EventListFragment" />
+            app:destination="@id/eventListFragment" />
 
         <!-- Navigate to Filter -->
         <action
             android:id="@+id/action_mainFragment_to_filterFragment"
             app:destination="@id/filterFragment" />
+        <!-- Navigate to Event Detail -->
+        <action
+            android:id="@+id/action_mainFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
     </fragment>
 
     <!-- Event List Fragment -->
